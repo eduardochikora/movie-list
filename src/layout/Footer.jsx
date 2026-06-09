@@ -5,9 +5,9 @@ function Footer() {
       <footer className='bg-slate-900 border-t border-white/10'>
         <div className='grid grid-cols-2 py-5'>
           <div className='flex flex-col items-center gap-1'>
-            <div className='flex items-center gap-3'>
+            <div className='flex items-center gap-3.5'>
               <LogoIcon/>
-              <h2 className='text-white text-2xl font-bold tracking-wide'>
+              <h2 className='text-white text-xl font-bold tracking-wide'>
                   Movie<span className='text-blue-400'>List.</span>
               </h2>
             </div>

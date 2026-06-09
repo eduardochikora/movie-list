@@ -33,12 +33,13 @@ export const getMovies = async () => {
       id: movie.id,
       poster: `https://image.tmdb.org/t/p/w342${movie.poster_path}`,
       image: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
-      title: movie.title,
+      name: movie.title,
       description: movie.overview,
       genres: getGenresMovies(movie.genre_ids, genres),
       date: movie.release_date.slice(0, 4),
       voteAverage: movie.vote_average.toFixed(1),
-      voteCount: movie.vote_count
+      voteCount: movie.vote_count,
+      badge: movie.vote_count >= 10000 ? 'POPULAR' : 'EM ALTA'
     }))
 
     return formattedMovies
@@ -58,10 +59,10 @@ export const getBannerMovie = async () => {
 
     const bannerMovie = {
       image: moviesInfo[randomIndex].image,
-      title: moviesInfo[randomIndex].title,
+      name: moviesInfo[randomIndex].name,
       date: moviesInfo[randomIndex].date,
       genres: moviesInfo[randomIndex].genres,
-      voteCount: moviesInfo[randomIndex].voteCount
+      badge: moviesInfo[randomIndex].badge
     }
 
     return bannerMovie
@@ -97,36 +98,3 @@ const fetchGenres = async () => {
 const getGenresMovies = (genreIds, genres) => { 
     return genres.filter(genre => genreIds.includes(genre.id)).slice(0, 2)
 }
-
-
-
-/*const details = {
-      id: result.id,
-      poster: `https://image.tmdb.org/t/p/w342${result.poster_path}`,
-      image: `https://image.tmdb.org/t/p/original${moviesNowPlayingData.results[randomMovie].backdrop_path}`,
-      title: moviesNowPlayingData.results[randomMovie].title,
-      description: releaseData.results[randomMovie].overview,
-      genre: getGenresMovie(moviesNowPlayingData),
-      date: moviesNowPlayingData.results[randomMovie].release_date.slice(0, 4),
-      average: moviesNowPlayingData.results[randomMovie].vote_average.toFixed(1),
-      note: result.vote_average.toFixed(1),
-    }*/
-
-/*export const getDetailsMovie = async () => {
-
-    // Pegar filmes em cartaz
-    const moviesNowPlayingData = await fetchMovies()
-
-    // Detalhes do filme selecionado
-    const detailsMovie = {
-      image: `https://image.tmdb.org/t/p/original${moviesNowPlayingData.results[randomMovie].backdrop_path}`,
-      title: moviesNowPlayingData.results[randomMovie].title,
-      genre: getGenresMovie(moviesNowPlayingData),
-      date: moviesNowPlayingData.results[randomMovie].release_date.slice(0, 4),
-      average: moviesNowPlayingData.results[randomMovie].vote_average.toFixed(1),
-      //description: releaseData.results[randomMovie].overview
-    }
-    
-    return detailsMovie
-   
-}*/
