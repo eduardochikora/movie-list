@@ -13,9 +13,9 @@ Aplicação web de listagem de filmes integrada à API do TMDB.
 
 ## 📸 Preview
 
-<img width="1366" height="768" alt="Captura de tela 2026-05-27 151922" src="https://github.com/user-attachments/assets/88178f5b-8a6e-4fa1-a1e9-a4f270ba4ac6" />
+<img width="1366" height="768" alt="Captura de tela 2026-06-09 142150" src="https://github.com/user-attachments/assets/24266ccf-d26d-4baf-a168-f23814c8b2f1" />
 
-<img width="1366" height="768" alt="Captura de tela 2026-05-27 152005" src="https://github.com/user-attachments/assets/d36194b7-ad85-4e86-87f3-29d949b090a3" />
+<img width="1366" height="768" alt="Captura de tela 2026-06-09 142230" src="https://github.com/user-attachments/assets/a091242e-be48-40be-b61f-12e5948649a7" />
 
 ## ⚙️ Pré-requisitos
 
