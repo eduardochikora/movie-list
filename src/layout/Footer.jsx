@@ -3,8 +3,8 @@ import LogoIcon from '../components/LogoIcon'
 function Footer() {
   return (
       <footer className='bg-slate-900 border-t border-white/10'>
-        <div className='grid grid-cols-2 py-5'>
-          <div className='flex flex-col items-center gap-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 md:items-center p-7 gap-10'>
+          <div className='flex flex-col md:items-center gap-3'>
             <div className='flex items-center gap-3.5'>
               <LogoIcon/>
               <span className='text-white text-xl font-bold tracking-wide'>
@@ -14,7 +14,7 @@ function Footer() {
             <p className='text-gray-400'>Explore e descubra filmes incríveis.</p>
           </div>
 
-          <div className='flex flex-col items-center gap-3'>
+          <div className='flex flex-col md:items-center gap-3'>
             <h4 className='text-white font-medium text-xl'>Fonte</h4>
             <p className='text-gray-400'>Dados fornecidos por  
               <a href='https://developer.themoviedb.org/docs/getting-started' target='_blank' rel='noopener noreferrer' className='text-blue-400 font-medium'> TMDB</a>
@@ -22,9 +22,9 @@ function Footer() {
           </div>
 
         </div>
-          <div className='bg-gray-400 h-px w-2/4 mx-auto'></div>
+          <div className='bg-white/10 h-px'></div>
           <div className='flex flex-col items-center gap-1.5 pt-4 pb-4'>
-            <p className='text-gray-400'>&copy; 2026 MovieList | Desenvolvido por 
+            <p className='text-gray-400 text-center'>&copy; 2026 MovieList | Desenvolvido por 
               <a href='https://github.com/eduardochikora' target='_blank' rel='noopener noreferrer' className='text-blue-400 font-medium'> Eduardo Chikora</a>
             </p>
             <p className='text-gray-400'>Todos os direitos reservados.</p>

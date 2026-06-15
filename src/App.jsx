@@ -56,11 +56,11 @@ function App() {
             
             <div className='absolute inset-0 bg-linear-to-b from-gray-800/50 via-gray-800/90 to-gray-800'>
 
-              <div className='flex flex-col items-start pl-16 pt-40 max-w-3xl gap-10'>
+              <div className='flex flex-col items-center md:items-start md:pl-10 pt-40 max-w-3xl gap-10'>
                 <span className='bg-blue-400 text-white py-1.5 px-3.5 text-sm font-medium tracking-wide rounded-4xl shadow-md shadow-gray-800/60'>
                   {movieBanner.badge}
                 </span>
-                <h1 className='text-5xl text-white font-bold drop-shadow-lg leading-15'>{movieBanner.name}</h1>
+                <h1 className='text-4xl md:text-5xl max-w-sm text-white text-center font-bold drop-shadow-lg leading-15'>{movieBanner.name}</h1>
                 <div className='flex items-center gap-5'>
                   <span className='text-gray-300 font-medium text-xl'>{movieBanner.date}</span>
                   <div className='flex gap-2'>
@@ -72,7 +72,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className='flex gap-3'>
+                <div className='flex flex-col md:flex-row gap-3'>
                   <button className='flex items-center gap-1.5 py-3 px-8 bg-blue-400 text-white rounded-xl cursor-pointer shadow-lg shadow-blue-500/30 transition duration-700 hover:bg-blue-500'>
                     <TbPlayerPlayFilled size={19}/> Assistir agora
                   </button>
@@ -87,9 +87,9 @@ function App() {
         </section>
 
         <section className='flex justify-center'>
-          <div className='flex flex-col gap-5 mb-15'>
+          <div className='flex justify-center flex-col gap-5 pt-10 pb-15 max-w-250'>
             <h1 className='text-white font-semibold text-2xl border-l-3 ml-1 border-blue-400 pl-2'>Filmes</h1>
-            <div className='grid grid-cols-5 auto-rows-[260px] gap-6 max-w-250'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 auto-rows-[250px] gap-6'>
               {showAllMovies ?
                 listMovies.map(movie =>
                   <MovieCard key={movie.id}
